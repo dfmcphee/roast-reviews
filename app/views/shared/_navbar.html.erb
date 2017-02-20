@@ -1,7 +1,9 @@
 <div class="navbar">
   <div class="navbar__inner">
     <div class="navbar__logo">
-      <%= image_tag asset_url('logo-dark.svg'), alt: 'Roast dot reviews' %>
+      <%= link_to '/' do %>
+        <%= image_tag asset_url('logo-dark.svg'), alt: 'Roast dot reviews' %>
+      <% end %>
     </div>
     <nav class="navbar__nav">
       <ul>

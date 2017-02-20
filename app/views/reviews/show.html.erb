@@ -1,25 +1,30 @@
 <section class="beans">
   <div class="container">
     <div class="card">
-      <%= image_tag @review.bean.image.thumb('150x150#').url if @review.bean.image_stored? %>
-
-      <div class="type">
-        <header>
-          <h1><%= link_to @review.bean.name, @review.bean %></h1>
-        </header>
-        <p>by <%= link_to @review.bean.roaster.name, roaster_path(@review.bean.roaster.id) %>
-        <p class="lead"><%= @review.bean.description %></p>
-        <p><%= @review.bean.roast %> roast</p>
+      <div class="card__image">
+        <%= image_tag @review.bean.image.thumb('150x150#').url if @review.bean.image_stored? %>
+      </div>
+      <div class="card__body">
+        <div class="type">
+          <header>
+            <h1><%= link_to @review.bean.name, @review.bean %></h1>
+          </header>
+          <p>by <%= link_to @review.bean.roaster.name, roaster_path(@review.bean.roaster.id) %>
+          <p class="lead"><%= @review.bean.description %></p>
+          <p><%= @review.bean.roast %> roast</p>
+        </div>
       </div>
     </div>
 
     <div class="card">
-      <div>
+      <div class="card__image">
         <%= gravatar_tag @review.user.email, :size => 50 %>
       </div>
-      <div class="type">
-        <p><%= @review.notes %></p>
-        <p>Rating: <%= @review.rating %></p>
+      <div class="card__body">
+        <div class="type">
+          <p><%= @review.notes %></p>
+          <p>Rating: <%= @review.rating %></p>
+        </div>
       </div>
     </div>
     <canvas id="review-graph" width="800" height="300" data-flavour-sweet="<%= %>"></canvas>

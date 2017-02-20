@@ -13,12 +13,14 @@
     <div class="roaster-beans">
       <% @roaster.beans.each do |beans| %>
         <div class="card">
-          <div>
+          <div class="card__image">
             <%= image_tag beans.image.thumb('100x100#').url if beans.image_stored? %>
           </div>
-          <div class="type">
-            <h3><%= link_to beans.name, bean_path(beans.id) %></h3>
-            <p><%= beans.description %></p>
+          <div class="card__body">
+            <div class="type">
+              <h3><%= link_to beans.name, bean_path(beans.id) %></h3>
+              <p><%= beans.description %></p>
+            </div>
           </div>
         </div>
       <% end %>

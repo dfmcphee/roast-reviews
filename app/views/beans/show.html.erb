@@ -34,12 +34,14 @@
     <h2>Reviews</h2>
     <% @reviews.each do |review| %>
       <div class="card">
-        <div>
+        <div class="card__image">
           <%= gravatar_tag review.user.email, :size => 50 %>
         </div>
-        <div class="type">
-          <p><%= review.notes %></p>
-          <p>Rating: <%= review.rating %></p>
+        <div class="card__body">
+          <div class="type">
+            <p><%= review.notes %></p>
+            <p>Rating: <%= review.rating %></p>
+          </div>
         </div>
       </div>
     <% end %>

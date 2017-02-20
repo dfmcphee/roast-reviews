@@ -1,10 +1,12 @@
 <div class="card">
-  <div>
+  <div class="card__image">
     <%= image_tag review.bean.image.thumb('100x100#').url if review.bean.image_stored? %>
   </div>
-  <div class="type">
-    <p><%= link_to review.bean.name, review %></p>
-    <p><%= review.bean.description %></p>
-    <p><%= review.bean.roast %> roast</p>
+  <div class="card__body">
+    <div class="type">
+      <p><%= link_to review.bean.name, review %></p>
+      <p><%= review.bean.description %></p>
+      <p><%= review.bean.roast %> roast</p>
+    </div>
   </div>
 </div>

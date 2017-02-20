@@ -5,13 +5,13 @@
   padding: $spacing;
   border: $default-border;
   border-radius: $border-radius;
-  margin-top: -$spacing;
 
-  > * {
-    margin-top: $spacing;
+  .card__image {
+    margin-right: $spacing;
+    margin-bottom: $spacing;
   }
 
-  > * + * {
-    margin-left: $spacing;
+  .card__body {
+    flex: 1 1 280px;
   }
 }
