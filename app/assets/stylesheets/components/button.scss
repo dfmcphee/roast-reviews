@@ -1,0 +1,11 @@
+.button {
+  color: $ink;
+  background: $background;
+  cursor: pointer;
+  border: $default-border;
+  display: inline-block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: ($spacing / 2) $spacing;
+  border-radius: $border-radius;
+}

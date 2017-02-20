@@ -1,0 +1,17 @@
+.container {
+  max-width: $constrained-max-width;
+  margin: 0 auto;
+  padding: ($spacing * 2) $spacing;
+
+  > * + * {
+    margin-top: $spacing * 2;
+  }
+
+  @media screen and (min-width: $constrained-max-width) {
+    padding: ($spacing * 2) 0;
+  }
+}
+
+.container--no-padding {
+  padding: 0;
+}

@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: $background;
+  color: $ink;
+  padding: ($spacing * 2) 0;
+}
+
+.navbar__inner {
+  max-width: $constrained-max-width;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  margin-top: -$spacing;
+
+  > * {
+    margin-top: $spacing;
+  }
+}
+
+.navbar__logo {
+  img {
+    max-width: 200px;
+  }
+
+  margin-right: $spacing;
+}
+
+.navbar__nav {
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+
+    + li {
+      margin-left: $spacing * 2;
+    }
+  }
+
+  a {
+    color: $ink;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($ink, 10%);
+    }
+  }
+}

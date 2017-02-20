@@ -1,0 +1,39 @@
+---
+name: brew-review
+up:
+- homebrew:
+  - openssl
+  - mysql
+  - phantomjs
+- ruby: 2.3.1
+- custom:
+    name: copy config/keys.yml
+    met?: test -f config/keys.yml
+    meet: cp config/keys.sample.yml config/keys.yml
+- bundler
+- database:
+    bootstrap: bin/rake db:create db:setup ; bin/rake db:test:prepare
+    migrate: bin/rake db:migrate db:test:prepare
+    host: localhost
+    user: root
+    password: ''
+    database: brew-review_development
+commands:
+  console:
+    desc: start a rails console
+    run: bin/rails console
+  server:
+    desc: start a rails server
+    run: bin/rails server -p 58007
+  test:
+    syntax:
+      argument: file
+      optional: args...
+    desc: run tests
+    run: bin/rake test
+open:
+  My Application: http://localhost:58007
+  brew-review: http://localhost:58007
+
+packages:
+  - git@github.com:Shopify/dev-shopify.git

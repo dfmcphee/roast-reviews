@@ -1,0 +1,35 @@
+<section>
+  <header class="header header--roaster">
+    <div class="header__inner">
+      <h1 class="header__title"><%= @roaster.name %></h1>
+      <p><%= @roaster.location %></p>
+    </div>
+  </header>
+
+  <div class="container">
+    <p class="lead">
+      <%= @roaster.description %>
+    </p>
+    <div class="roaster-beans">
+      <% @roaster.beans.each do |beans| %>
+        <div class="card">
+          <div>
+            <%= image_tag beans.image.thumb('100x100#').url if beans.image_stored? %>
+          </div>
+          <div class="type">
+            <h3><%= link_to beans.name, bean_path(beans.id) %></h3>
+            <p><%= beans.description %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="actions">
+      <% if user_signed_in? && current_user.admin %>
+        <%= link_to 'Edit roaster', edit_roaster_path(@roaster), class: 'button' %>
+        <%= link_to 'Delete roaster', @roaster, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+      <% end %>
+      <%= link_to 'Add beans', new_bean_path(roaster_id: @roaster.id), class: 'button' %>
+    </div>
+  </div>
+
+</section>

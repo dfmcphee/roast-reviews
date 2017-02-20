@@ -1,0 +1,46 @@
+.header {
+  color: $inverse-ink;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  padding: ($spacing * 4) $spacing;
+  background-size: cover;
+
+  a {
+    color: $inverse-ink;
+  }
+
+  a:hover,
+  a:focus {
+    color: darken($inverse-ink, 10%);
+  }
+}
+
+.header__inner {
+  max-width: $constrained-max-width;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  * + * {
+    margin-top: $spacing;
+  }
+}
+
+.header__title {
+  font-size: 3.8rem;
+}
+
+.header--beans {
+  background: $overlay-gradient, asset-url('beans.jpg');
+  background-position:center center;
+  position: relative;
+  background-size: cover;
+}
+
+.header--roaster {
+  background: $overlay-gradient, asset-url('roaster.jpg');
+  background-position: center center;
+  position: relative;
+  background-size: cover;
+}

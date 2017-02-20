@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: $spacing;
+  border: $default-border;
+  border-radius: $border-radius;
+  margin-top: -$spacing;
+
+  > * {
+    margin-top: $spacing;
+  }
+
+  > * + * {
+    margin-left: $spacing;
+  }
+}

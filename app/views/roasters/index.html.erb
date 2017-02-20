@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Roasters</h1>
+  <% @roasters.each do |roaster| %>
+    <div class="card">
+      <div class="type">
+        <h2><%= link_to roaster.name, roaster %></h2>
+        <p><%= roaster.location %></p>
+        <p class="lead"><%= roaster.description %></p>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to 'Add roaster', new_roaster_path, class: 'button' %>
+</div>

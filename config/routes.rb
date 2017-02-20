@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/reviews/mine', to: 'reviews#mine', as: :user_reviews
+  resources :reviews
+  resources :roasters
+  resources :beans
+
+  devise_for :users
+
+  root to: 'home#index'
 end

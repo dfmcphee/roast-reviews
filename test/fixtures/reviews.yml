@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  notes: MyText
+  roast: MyString
+  sour: 1
+  sweet: 1
+  bitter: 1
+  salty: 1
+  rating: 1
+
+two:
+  notes: MyText
+  roast: MyString
+  sour: 1
+  sweet: 1
+  bitter: 1
+  salty: 1
+  rating: 1

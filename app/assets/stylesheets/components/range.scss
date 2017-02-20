@@ -1,0 +1,55 @@
+.range {
+  display: flex;
+  padding: $spacing 0;
+}
+
+.range__input {
+  flex: 1 1 auto;
+  margin: auto;
+  outline: none;
+  height: $spacing;
+  border: $default-border;
+  border-radius: $border-radius;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.range__input::-webkit-slider-runnable-track {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+.range__input::-moz-range-track {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.range__input::-moz-focus-outer {
+  border: 0;
+}
+
+.range__input::-webkit-slider-thumb {
+  width: $spacing * 2;
+  height: $spacing * 2;
+  background: $primary;
+  border: $default-border;
+  border-radius: 100%;
+  -webkit-appearance: none;
+}
+
+.range__input::-moz-range-thumb {
+  width: $spacing * 2;
+  height: $spacing * 2;
+  border: 0;
+  background: $primary;
+  border-radius: 100%;
+}
+
+.range__value {
+  flex: 0 0 80px;
+  font-size: 2rem;
+  text-align: center;
+}

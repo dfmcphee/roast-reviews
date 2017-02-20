@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require Chart.bundle
 //= require_tree .
+
+function addReadyListener(callback) {
+  $(document).ready(callback)
+  $(document).on('page:load', callback);
+}

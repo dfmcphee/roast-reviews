@@ -1,0 +1,5 @@
+<div class="container">
+  <h1>Reviews</h1>
+  <%= render partial: 'review', collection: @reviews %>
+  <%= link_to 'Add review', new_review_path, class: 'button' %>
+</div>

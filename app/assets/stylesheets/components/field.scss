@@ -1,0 +1,29 @@
+.field {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: $spacing / 2;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  select {
+    border: $default-border;
+    border-radius: $border-radius;
+    background: transparent;
+    padding: $spacing / 2;
+    font-size: 1.6rem;
+    -webkit-appearance: none;
+  }
+}
+
+.field--switch {
+  flex-direction: row;
+
+  label {
+    margin-left: $spacing;
+  }
+}

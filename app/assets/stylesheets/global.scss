@@ -1,0 +1,60 @@
+html {
+  font-size: ($rem-base-font-size / $browser-default-font-size) * 100%;
+}
+
+body {
+  background-color: $background;
+  color: $ink;
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p,
+ol,
+ul,
+td {
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  margin: 0;
+}
+
+pre {
+  background-color: $background;
+  padding: $spacing;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+
+a {
+  color: $ink;
+
+  &:visited {
+    color: lighten($ink, 15%);
+  }
+}
+
+th {
+  padding: $spacing / 2;
+}
+
+td {
+  padding: $spacing / 2;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: $spacing;
+  }
+}

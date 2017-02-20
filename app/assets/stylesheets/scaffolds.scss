@@ -1,0 +1,38 @@
+#notice {
+  color: $success;
+}
+
+.field_with_errors {
+  padding: $spacing;
+  background-color: $error;
+  display: table;
+}
+
+#error_explanation {
+  width: 100%;
+  border: 2px solid $error;
+  padding: $spacing;
+  padding-bottom: 0;
+  margin-bottom: $spacing;
+  background-color: $background;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    margin: 0 0 $spacing;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    margin-bottom: 0;
+    background-color: $error;
+    color: $reverse-ink;
+  }
+
+  ul li {
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+  }
+}
+
+label {
+  display: block;
+}

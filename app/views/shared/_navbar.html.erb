@@ -1,0 +1,19 @@
+<div class="navbar">
+  <div class="navbar__inner">
+    <div class="navbar__logo">
+      <%= image_tag asset_url('logo-dark.svg') %>
+    </div>
+    <nav class="navbar__nav">
+      <ul>
+        <li><%= link_to 'Roasters', roasters_path %></li>
+        <li><%= link_to 'Beans', beans_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to 'My reviews', user_reviews_path %></li>
+          <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'Sign in', new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</div>

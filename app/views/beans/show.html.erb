@@ -1,0 +1,52 @@
+<section class="beans">
+  <header class="header header--beans">
+    <div class="header__inner">
+      <h1 class="header__title"><%= @bean.name %></h1>
+      <p>by <%= link_to @bean.roaster.name, roaster_path(@bean.roaster.id) %>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <div>
+        <%= image_tag @bean.image.thumb('200x200#').url if @bean.image_stored? %>
+      </div>
+      <div class="type">
+        <p class="lead"><%= @bean.description %></p>
+        <p><%= @bean.roast %> roast</p>
+        <p>Average rating: <%= @bean.average_rating %></p>
+      </div>
+    </div>
+
+    <h2>Flavour profile</h2>
+    <div class="graph">
+      <canvas id="review-graph" width="800" height="300" data-flavour-sweet="<%= %>"></canvas>
+    </div>
+
+    <script>
+      addReadyListener(function() {
+        var data = [ <%= @bean.average_flavour(:sour) %>, <%= @bean.average_flavour(:sweet) %>, <%= @bean.average_flavour(:salty) %>, <%= @bean.average_flavour(:nutty) %>, <%= @bean.average_flavour(:bitter) %>]
+        var graphElement = document.getElementById('review-graph');
+        createBeansTasteGraph(graphElement, data);
+      });
+    </script>
+
+    <h2>Reviews</h2>
+    <% @reviews.each do |review| %>
+      <div class="card">
+        <div>
+          <%= gravatar_tag review.user.email, :size => 50 %>
+        </div>
+        <div class="type">
+          <p><%= review.notes %></p>
+          <p>Rating: <%= review.rating %></p>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to 'Add review', new_review_path(beans_id: @bean.id), class: 'button' %>
+    <% if user_signed_in? && current_user.admin %>
+      <%= link_to 'Edit beans', edit_bean_path(@bean), class: 'button' %>
+      <%= link_to 'Delete beans', @bean, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+    <% end %>
+  </div>
+</div>
