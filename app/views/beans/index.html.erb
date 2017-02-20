@@ -2,14 +2,16 @@
   <h1>Beans</h1>
   <% @beans.each do |bean| %>
     <div class="card">
-      <div>
+      <div class="card__image">
         <%= image_tag bean.image.thumb('100x100#').url if bean.image_stored? %>
       </div>
-      <div class="type">
-        <p><%= link_to bean.name, bean %></p>
-        <p>by <%= link_to bean.roaster.name, roaster_path(bean.roaster) %></p>
-        <p><%= bean.description %></p>
-        <p><%= bean.roast %> roast</p>
+      <div class="card__body">
+        <div class="type">
+          <p><%= link_to bean.name, bean %></p>
+          <p>by <%= link_to bean.roaster.name, roaster_path(bean.roaster) %></p>
+          <p><%= bean.description %></p>
+          <p><%= bean.roast %> roast</p>
+        </div>
       </div>
     </div>
   <% end %>
