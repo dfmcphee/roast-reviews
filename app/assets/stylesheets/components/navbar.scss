@@ -3,7 +3,11 @@
   justify-content: center;
   background: $background;
   color: $ink;
-  padding: ($spacing * 2) 0;
+  padding: $spacing;
+
+  @media screen and (min-width: $constrained-max-width) {
+    padding: ($spacing * 2) 0;
+  }
 }
 
 .navbar__inner {
