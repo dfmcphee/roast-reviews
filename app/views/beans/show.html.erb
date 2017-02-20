@@ -11,7 +11,7 @@
       <div class="card__image">
         <%= image_tag @bean.image.thumb('200x200#').url if @bean.image_stored? %>
       </div>
-      <div class="card__body"
+      <div class="card__body">
         <div class="type">
           <p class="lead"><%= @bean.description %></p>
           <p><%= @bean.roast %> roast</p>
