@@ -5,3 +5,5 @@ services:
   - mysql
 script:
   - bin/rake db:test:prepare
+before_install:
+  - mysql -e 'CREATE DATABASE brew-review_test;'
