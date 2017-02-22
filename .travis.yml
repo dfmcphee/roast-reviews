@@ -7,6 +7,6 @@ services:
 script:
   - bin/rake db:test:prepare
 before_install:
-  - mysql -e 'CREATE DATABASE roast_review_test;'
+  - mysql -e 'CREATE DATABASE roast_reviews_test;'
 notifications:
   email: false

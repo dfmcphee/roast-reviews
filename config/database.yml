@@ -16,7 +16,7 @@ default: &default
 development:
   <<: *default
   adapter: mysql2
-  database: brew-review_development
+  database: roast_reviews_development
   username: root
   password:
   host: localhost
@@ -27,7 +27,7 @@ development:
 test:
   <<: *default
   adapter: mysql2
-  database: roast_review_test
+  database: roast_reviews_test
   username: root
   password:
   host: localhost
