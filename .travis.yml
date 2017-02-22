@@ -3,3 +3,5 @@ rvm:
   - 2.3.1
 services:
   - mysql
+script:
+  - bin/rake db:test:prepare
