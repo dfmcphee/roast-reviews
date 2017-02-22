@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require Chart.bundle
+//= require Chart
 //= require_tree .
 
 function addReadyListener(callback) {

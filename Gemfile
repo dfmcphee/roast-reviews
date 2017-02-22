@@ -20,8 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
-gem 'chartkick', '~> 2.2'
+gem 'chart-js-rails'
 gem 'devise', '~> 4.2'
 gem 'dragonfly', '~> 1.1.1'
 gem 'gravatarify', '~> 3.0.0'

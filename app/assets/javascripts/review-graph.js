@@ -11,7 +11,11 @@ function createBeansTasteGraph(graphElement, data) {
       options: {
           scales: {
               yAxes: [{
-                  display: false
+                  display: false,
+                  ticks: {
+                    min: 1,
+                    max: 10
+                  }
               }]
           },
           legend: false
