@@ -1,4 +1,5 @@
 language: ruby
+cache: bundler
 rvm:
   - 2.3.1
 services:
@@ -7,3 +8,5 @@ script:
   - bin/rake db:test:prepare
 before_install:
   - mysql -e 'CREATE DATABASE roast_review_test;'
+notifications:
+  email: false
