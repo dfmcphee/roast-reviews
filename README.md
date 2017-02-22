@@ -1,5 +1,7 @@
 # roast-reviews
 
+[![Build Status](https://travis-ci.org/dfmcphee/roast-reviews.svg?branch=master)](https://travis-ci.org/dfmcphee/roast-reviews)
+
 Coffee beans reviews.
 
 ## Dependencies
