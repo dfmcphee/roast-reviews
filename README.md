@@ -1,24 +1,20 @@
-# README
+# roast-reviews
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Coffee beans reviews.
 
-Things you may want to cover:
+## Dependencies
 
-* Ruby version
+* Ruby 2.3.1
+* MySQL
 
-* System dependencies
+## Getting started
 
-* Configuration
+`bin/rake db:setup`
 
-* Database creation
+`bin/rails server`
 
-* Database initialization
+## Testing
 
-* How to run the test suite
+`bin/rails db:test:prepare`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`bin/rails test`
